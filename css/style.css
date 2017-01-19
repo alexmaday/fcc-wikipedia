@@ -1,0 +1,9 @@
+/* Magnifying glass color: 217, 111, 50 */
+body {
+    background: rgb(9, 43, 64);
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+a {
+    color: white;
+}
