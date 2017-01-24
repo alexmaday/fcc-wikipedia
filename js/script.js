@@ -59,10 +59,16 @@ window.onload = function() {
    }
 
    function clearResults() {
-      var results = document.getElementById('results');
-      if (results != null) {
-          document.getElementsByTagName('body')[0].removeChild(results);
-      }
+       // this may be the first run
+       // does the results div exist?
+       if (document.getElementById('results') != null) {
+            var results = document.getElementById('results');
+            if (results != null) {
+                document.getElementsByTagName('body')[0].removeChild(results);
+            }
+       } else {
+           // nothing to do, will be created inside writeArticles
+       }
    }
    
    // xmlhttprequest utilities
