@@ -8,17 +8,17 @@ yankees blue 092b40
 */
 body {
     background: #0f4e76;
-    color: #fff;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    width: 700px;
-    margin: 0 auto;
+    color: #000;
+    /*font-family: Verdana, Geneva, Tahoma, sans-serif;*/
+   
 }
 a {
-    color: #fff;
+    color: #000;
     text-decoration: none;
 /* how could I animate an underline on hover?
   border-bottom: 1px solid white;*/
 }
+
 a:hover {
     font-style: italic;
   text-decoration: underline;
