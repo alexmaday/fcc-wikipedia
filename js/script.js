@@ -1,9 +1,6 @@
 window.onload = function() {
-   // with redirect
-   var qstring = "https://en.wikipedia.org/w/api.php?action=query&format=json&prop=extracts%7Cinfo&generator=prefixsearch&exsentences=3&exlimit=10&exintro=1&inprop=url&redirects=1";
-
-   // and without
-   // var qstring = "https://en.wikipedia.org/w/api.php?action=query&format=json&prop=extracts%7Cinfo&generator=prefixsearch&exsentences=3&exlimit=10&exintro=1&inprop=url";
+   
+   var qstring = "http://en.wikipedia.org/w/api.php?action=query&format=json&list=search&"
    var cors = "&origin=*";
 
    document.getElementById('btnSearch').addEventListener('click', getArticles);
@@ -24,14 +21,14 @@ window.onload = function() {
          http.addEventListener('error', transferFailed);
          http.addEventListener('abort', tranferCanceled);
          
-         var s = "&gpssearch=" + searchTerm;
+         var s = "&srsearch=" + searchTerm;
 
          http.onreadystatechange = function() {
             console.log('Ready state: ' + http.readyState);
             if (http.readyState === 4 && http.status == 200) {
                response = JSON.parse(http.responseText);
-               writeArticles(response.query.pages);
-               console.log('Got it');
+            //    writeArticles(response.query.pages);
+               console.log(response);
             }
          };
 
