@@ -45,13 +45,24 @@ window.onload = function() {
 
     // param articles is an array
     for (var i = 0; i < articles.length; i++) {
-         var title = articles[i].title;
-         var snippet = articles[i].snippet;
-         var link = "http://en.wikipedia.org/wiki/" + title;
-  
+         
          var hit = document.createElement('div');
+         var heading = document.createElement('h2')
+         var desc = document.createElement('p');
+         var anchor = document.createElement('a');
+         
+         heading.innerHTML = articles[i].title;
+         hit.appendChild(heading);
+
+         desc.innerHTML = articles[i].snippet;
+         hit.appendChild(desc);
+
+         anchor.href = "http://en.wikipedia.org/wiki/" + articles[i].title;
+         anchor.target = "_blank";
+         hit.appendChild(anchor);
+         
          hit.classList.add('hit');
-         hit.innerHTML = '<h2>' + title + '</h2>' + '<p>' + snippet + '</p><p><a href="' + link + '" target="_blank"></a></p>';
+
          results.appendChild(hit);
       }
       document.body.appendChild(results);
