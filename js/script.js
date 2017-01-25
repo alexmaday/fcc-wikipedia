@@ -34,7 +34,9 @@ window.onload = function() {
          anchor.target = "_blank";
          hit.appendChild(anchor);
 
-         hit.classList.add('hit', 'col-xs-offset-2', 'col-xs-8', 'well');
+        //  heading.classList.add('flow-text');
+        //  desc.classList.add('flow-text');
+         hit.classList.add('hit', 'col', 'offset-s2', 's8', 'hoverable', 'card-panel', 'orange', 'lighten-2');
 
          results.appendChild(hit);
          results.classList.add('row');
