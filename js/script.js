@@ -21,7 +21,7 @@ window.onload = function() {
          http.addEventListener('error', transferFailed);
          http.addEventListener('abort', tranferCanceled);
          
-         var s = "&srsearch=" + searchTerm;
+         var s = "&srsearch=" + encodeURI(searchTerm);
 
          http.onreadystatechange = function() {
             console.log('Ready state: ' + http.readyState);
