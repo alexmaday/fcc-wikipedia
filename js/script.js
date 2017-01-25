@@ -15,12 +15,6 @@ window.onload = function() {
       } else {
          var http = new XMLHttpRequest();
          
-         // monitor http status
-         http.addEventListener('progress', updateProgress);
-         http.addEventListener('load', transferComplete);
-         http.addEventListener('error', transferFailed);
-         http.addEventListener('abort', tranferCanceled);
-         
          var s = "&srsearch=" + encodeURI(searchTerm);
 
          http.onreadystatechange = function() {
@@ -79,25 +73,6 @@ window.onload = function() {
        } else {
            // nothing to do, will be created inside writeArticles
        }
-   }
-   
-   // xmlhttprequest utilities
-   // progress on transfers from the server to the client (downloads)
-   function updateProgress(oEvent) {
-      if (oEvent.lengthComputable) {
-         var percentComplete = oEvent.loaded / oEvent.total;
-      } else {
-         // unable to compute progress information since the total size is unknown
-      }
-   }
-   function transferComplete(evt) {
-      console.log('The transfer is complete');
-   }
-   function transferFailed(evt) {
-      console.log('An error occurred while transferring the file');
-   }
-   function tranferCanceled(evt) {
-      console.log('The transfer has been cancelled by the user');
    }
    
 };
