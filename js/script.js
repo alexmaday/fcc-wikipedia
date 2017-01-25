@@ -27,7 +27,7 @@ window.onload = function() {
             console.log('Ready state: ' + http.readyState);
             if (http.readyState === 4 && http.status == 200) {
                response = JSON.parse(http.responseText);
-            //    writeArticles(response.query.pages);
+               writeArticles(response.query.search);
                console.log(response);
             }
          };
@@ -38,20 +38,22 @@ window.onload = function() {
 
    }
 
-   function writeArticles(response) {
+   function writeArticles(articles) {
       clearResults(); // from previous search
       var results = document.createElement('div'); results.setAttribute('id', 'results');
-      var keys = Object.keys(response);
+    //   var keys = Object.keys(response);
 
-      keys.forEach(function(key) {
-         var title = response[key].title;
-         var extract = response[key].extract;
-         var link = response[key].fullurl;
+    // param articles is an array
+    for (var i = 0; i < articles.length; i++) {
+         var title = articles[i].title;
+         var snippet = articles[i].snippet;
+         var link = "http://en.wikipedia.org/wiki/" + title;
+  
          var hit = document.createElement('div');
          hit.classList.add('hit');
-         hit.innerHTML = '<h2>' + title + '</h2>' + '<p>' + extract + '</p><p><a href="' + link + '" target="_blank"></a></p>';
+         hit.innerHTML = '<h2>' + title + '</h2>' + '<p>' + snippet + '</p><p><a href="' + link + '" target="_blank"></a></p>';
          results.appendChild(hit);
-      });
+      }
       document.body.appendChild(results);
    }
 
