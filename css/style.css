@@ -7,13 +7,13 @@ gargoyle gas yellow fde74c
 yankees blue 092b40
 */
 body {
-    background: #0f4e76;
-    color: #000;
+    /*background: #0f4e76;
+    color: #000;*/
     /*font-family: Verdana, Geneva, Tahoma, sans-serif;*/
    
 }
 a {
-    color: #000;
+    /*color: #000;*/
     text-decoration: none;
 /* how could I animate an underline on hover?
   border-bottom: 1px solid white;*/
@@ -26,11 +26,11 @@ a:hover {
 
 .hit {
   position: relative;
-    width: 600px;
-    background-color: #657A88;
-    margin: 30px 10px;
-    padding: 10px;
-  border-left: 6px solid #E8C547;
+    /*width: 600px;*/
+    /*background-color: #657A88;*/
+    /*margin: 30px 10px;*/
+    /*padding: 10px;*/
+  /*border-left: 6px solid #E8C547;*/
 }
 .hit:hover {
   cursor: hand;

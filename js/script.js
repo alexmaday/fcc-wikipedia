@@ -55,11 +55,13 @@ window.onload = function() {
          anchor.target = "_blank";
          hit.appendChild(anchor);
          
-         hit.classList.add('hit');
+         hit.classList.add('hit', 'col-xs-offset-2', 'col-xs-8', 'well');
 
          results.appendChild(hit);
+         results.classList.add('row')
       }
-      document.body.appendChild(results);
+      document.getElementsByClassName('container')[0].appendChild(results);
+    //   document.body.appendChild(results);
    }
 
    function clearResults() {
