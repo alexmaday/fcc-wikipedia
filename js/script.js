@@ -4,7 +4,12 @@ window.onload = function() {
    var cors = "&origin=*";
 
    document.getElementById('btnSearch').addEventListener('click', getArticles);
-
+   document.getElementById('searchTerm').addEventListener('keyup', function(event) {
+        event.preventDefault();
+        if (event.keyCode == 13) {
+            document.getElementById('btnSearch').click();
+        }
+   });
    function getArticles() {
       var response = "";
       var searchTerm = "";
