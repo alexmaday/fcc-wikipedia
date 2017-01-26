@@ -1,6 +1,6 @@
 window.onload = function() {
    "use strict";
-   var qstring = "http://en.wikipedia.org/w/api.php?action=query&format=json&list=search&";
+   var qstring = "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&";
    var cors = "&origin=*";
 
    function clearResults() {
@@ -30,7 +30,7 @@ window.onload = function() {
          desc.innerHTML = articles[i].snippet;
          hit.appendChild(desc);
 
-         anchor.href = "http://en.wikipedia.org/wiki/" + articles[i].title;
+         anchor.href = "https://en.wikipedia.org/wiki/" + articles[i].title;
          anchor.target = "_blank";
          hit.appendChild(anchor);
 
