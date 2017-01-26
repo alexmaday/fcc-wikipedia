@@ -1,9 +1,3 @@
-/* Magnifying glass color: d96f32 
- maximum yellow red: E8C547
-silver lake blue 5c80bc
-gargoyle gas yellow fde74c
-yankees blue 092b40
-*/
 body {
     margin-top: 8vh;
     font-family: 'Roboto', sans-serif;
@@ -13,10 +7,7 @@ h1, h2 {
 }  
 a {
     text-decoration: none;
-/* how could I animate an underline on hover?
-  border-bottom: 1px solid white;*/
 }
-
 a:hover {
   font-style: italic;
   text-decoration: underline;
@@ -24,13 +15,11 @@ a:hover {
 .hit {
   position: relative;
 } 
-
 .hit:hover {
   cursor: hand;
   cursor: pointer;
   opacity: .9;
 }
-
 .hit a {
   position: absolute;
   width: 100%;
@@ -41,9 +30,11 @@ a:hover {
   z-index: 10;
 /*  raises anchor tag above everything else in the div*/
 }
-
-/*.waves-effect.waves-orange .waves-ripple {
-     /* The alpha value allows the text and background color
-     of the button to still show through. */
-      background-color: #FFF;
-} */
+.waves-effect.waves-orange .waves-ripple {
+    background-color: #FFF; 
+}
+@media screen and (max-width: 480px) {
+  h2 {
+    font-size: 2.1rem;
+  }
+}
