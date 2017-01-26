@@ -14,11 +14,12 @@ a:hover {
 }
 .hit {
   position: relative;
+  opacity: .8;
 } 
 .hit:hover {
   cursor: hand;
   cursor: pointer;
-  opacity: .9;
+  opacity: 1;
 }
 .hit a {
   position: absolute;
